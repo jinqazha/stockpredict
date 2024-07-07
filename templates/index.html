@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Price Prediction</h1>
+        <form id="stock-form">
+            <input type="text" id="ticker" name="ticker" placeholder="Enter stock ticker" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div class="prediction">
+            <p id="last-price"></p>
+            <p id="predicted-price"></p>
+            <p id="percentage-change"></p>
+            <p id="error-message" style="color: red;"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
